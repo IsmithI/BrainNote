@@ -16,7 +16,7 @@
 
 <div align="center">
 
-    <form action="<c:url value="${pageContext.request.contextPath}/login" />" method="post">
+    <form action="<c:url value="/index" />" method="post">
         Login:<input type="text" name="username"><br>
         Password:<input type="password" name="password"><br>
         <input type="submit"><br>

@@ -23,15 +23,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ModelAndView onLogin() {
-        ModelAndView model = new ModelAndView();
-        model.setViewName("login");
-
-        return model;
-    }
-
-    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public ModelAndView onIndex(@RequestParam(required = false, defaultValue = "") String result) {
 
         ModelAndView model = new ModelAndView();
@@ -39,7 +31,7 @@ public class UserController {
         if (!result.equals(""))
             model.addObject("result", result);
 
-        model.setViewName("login");
+        model.setViewName("index");
 
         return model;
     }
