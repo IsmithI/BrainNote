@@ -1,11 +1,10 @@
 package ua.kiev.prog;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.Ordered;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -15,6 +14,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
@@ -27,7 +27,7 @@ import java.util.Properties;
 @ComponentScan("ua.kiev.prog")
 @EnableTransactionManagement
 @EnableWebMvc
-@SpringBootApplication(exclude={HibernateJpaAutoConfiguration.class})
+@Import({SecurityConfig.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Bean
@@ -42,6 +42,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         entityManagerFactory.setJpaProperties(jpaProp);				//задает доп настройки
         entityManagerFactory.setPackagesToScan("ua.kiev.prog");
         return entityManagerFactory;
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/login").setViewName("login");
+        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
     }
 
     @Bean
@@ -59,7 +65,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return adapter;
     }
 
-    @Bean
+    @Bean(name = "dataSource")
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");

@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page session="false"%>
+
 <html>
 <head>
     <title>Registration</title>
@@ -8,12 +9,16 @@
 </head>
 <body>
 <div align="center">
-    <form action="/register_submit" method="post">
-        Login: <input type="text" name="login"><br>
-        Password: <input type="password" name="password" id="p1"><br>
-        Repeat password: <input type="password" name="password_repeat" id="p2"><br>
+    <form name = "loginForm" action="${pageContext.request.contextPath}/register" method="post">
+        Login: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        Repeat password: <input type="password" name="password_repeat"><br>
         Email: <input type="email" name="email"><br>
-        <input type="submit" id="submit_reg">
+
+        <input type="hidden" name="${_csrf.parameterName}"
+               value="${_csrf.token}" />
+
+        <input type="submit">
     </form>
 
     <c:if test="${result != ''}">
@@ -21,17 +26,6 @@
     </c:if>
 </div>
 
-<script>
-    $('#submit_reg').click(function () {
-       var p1 = $('#p1').val();
-       var p2 = $('#p2').val();
-
-       if (p1 != p2) {
-           alert("Passwords do not match!");
-           window.location.reload();
-       }
-    });
-</script>
 
 </body>
 </html>

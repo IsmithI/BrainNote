@@ -1,8 +1,6 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
-import net.sf.ehcache.search.expression.Not;
 import org.springframework.stereotype.Repository;
-import ua.kiev.prog.Entities.UserContent.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -54,9 +52,9 @@ public class NotebookDAOImpl implements NotebookDAO {
     }
 
     @Override
-    public List<Notebook> list(String login) {
+    public List<Notebook> list(String username) {
         Query query = entityManager.createQuery("SELECT n FROM Notebook n WHERE n.user.login = :login");
-        query.setParameter("login", login);
+        query.setParameter("login", username);
         return query.getResultList();
     }
 

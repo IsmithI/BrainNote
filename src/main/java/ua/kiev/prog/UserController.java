@@ -1,51 +1,51 @@
 package ua.kiev.prog;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import ua.kiev.prog.Entities.Role;
 import ua.kiev.prog.Entities.UserContent.User;
 import ua.kiev.prog.Entities.UserService;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
+import javax.xml.ws.http.HTTPBinding;
+import java.util.HashSet;
 
 /**
  * Created by smith on 29.01.17.
  */
 @Controller
-@SessionAttributes("current_user")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String onIndex(Model model,
-                          @RequestParam(required = false, defaultValue = "") String result,
-                          @SessionAttribute(value = "current_user", required = false) User user,
-                          RedirectAttributes redirectAttributes) {
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ModelAndView onLogin() {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("login");
 
-        if (model.containsAttribute("current_user")) {
-            redirectAttributes.addFlashAttribute("current_user", user);
-            return "redirect:/notes";
-        }
-
-        if (!result.equals(""))
-            model.addAttribute("result", result);
-        else model.addAttribute("result", "");
-
-        return "index";
+        return model;
     }
 
-    @RequestMapping("/register")
+    @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
+    public ModelAndView onIndex(@RequestParam(required = false, defaultValue = "") String result) {
+
+        ModelAndView model = new ModelAndView();
+
+        if (!result.equals(""))
+            model.addObject("result", result);
+
+        model.setViewName("login");
+
+        return model;
+    }
+
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String onRegister(Model model,
                              @RequestParam(required = false, defaultValue = "") String result) {
         if (!result.equals(""))
@@ -54,42 +54,42 @@ public class UserController {
         return "register";
     }
 
-    @RequestMapping(value = "/register_submit", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ModelAndView onRegisterSubmit(
-            @RequestParam String login,
+            @RequestParam String username,
             @RequestParam String password,
-            @RequestParam String email,
-            RedirectAttributes redirectAttributes
+            @RequestParam String password_repeat,
+            @RequestParam String email
             ) {
 
-        User user = new User(login, password, email, Utils.userAuthorities);
+        User user = new User(username, password, email);
+        Role role = new Role(user, Utils.ROLE_USER);
+        user.getRoles().add(role);
 
-        if (userService.userLoginExists(user))
-            return new ModelAndView("register", "result", "User with this login already exists!");
+        if (userService.userLoginExists(user) || !password.equals(password_repeat))
+            return new ModelAndView("register", "result", "Authentication failed!");
 
         userService.addUser(user);
-        redirectAttributes.addFlashAttribute("current_user", user);
+        userService.addRole(role);
 
-        return new ModelAndView("redirect:/notes");
+        return new ModelAndView("/register");
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView onLogin(@RequestParam String login,
-                                @RequestParam String password,
-                                RedirectAttributes redirectAttributes) {
-
-        User user = userService.login(login, password);
-
-        UserDetails details = new User(login, password, user.getEmail(), Utils.userAuthorities);
-
-
-        if (user != null) {
-            redirectAttributes.addFlashAttribute("current_user", user);
-            return new ModelAndView("redirect:/notes");
-        }
-        else return new ModelAndView("index", "result", "Log in failed!");
-    }
-
+//
+//    @RequestMapping(value = "/login", method = RequestMethod.GET)
+//    public ModelAndView onLogin(@RequestParam String login,
+//                                @RequestParam String password,
+//                                RedirectAttributes redirectAttributes) {
+//
+//        User user = userService.login(login, password);
+//
+//        if (user != null) {
+//            redirectAttributes.addFlashAttribute("current_user", user);
+//            return new ModelAndView("redirect:/notes");
+//        }
+//        else return new ModelAndView("index", "result", "Log in failed!");
+//    }
+//
 //    @RequestMapping(value = "/logout", method = RequestMethod.GET)
 //    public String onLogout() {
 //

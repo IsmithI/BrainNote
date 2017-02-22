@@ -1,6 +1,7 @@
 package ua.kiev.prog.Entities.UserContent;
 
 import org.springframework.stereotype.Repository;
+import ua.kiev.prog.Entities.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,6 +19,11 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void addUser(User user) {
         entityManager.merge(user);
+    }
+
+    @Override
+    public void addRole(Role role) {
+        entityManager.merge(role);
     }
 
     @Override
@@ -51,10 +57,10 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User login(String login, String password) {
+    public User login(String username, String password) {
         List<User> users = entityManager.createQuery("SELECT u FROM User u").getResultList();
         for (User user : users) {
-            if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 return user;
             }
         }
@@ -65,9 +71,14 @@ public class UserDAOImpl implements UserDAO {
     public boolean userLoginExists(User user) {
         List<User> users = entityManager.createQuery("SELECT u FROM User u").getResultList();
         for (User u : users) {
-            if (u.getLogin().equals(user.getLogin()))
+            if (u.getUsername().equals(user.getUsername()))
                 return true;
         }
+        return false;
+    }
+
+    @Override
+    public boolean userLoginExists(String login) {
         return false;
     }
 }

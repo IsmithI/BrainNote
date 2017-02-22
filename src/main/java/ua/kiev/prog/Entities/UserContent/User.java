@@ -1,83 +1,57 @@
 package ua.kiev.prog.Entities.UserContent;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import ua.kiev.prog.Entities.NotebookContent.Notebook;
+import ua.kiev.prog.Entities.Role;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by smith on 29.01.17.
  */
 @Entity
 @Table(name = "users")
-public class User implements UserDetails {
+public class User {
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String login;
+    @Id
+    private String username;
     private String password;
+    private boolean enabled;
+
     private String email;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Notebook> notebooks = new ArrayList<>();
 
+    @OneToMany(mappedBy = "role_user", fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<>();
+
     public User() {}
 
-    public User(String login, String password, String email, Collection<? extends GrantedAuthority> authorities) {
-        this.login = login;
+    public User(String username, String password, String email) {
+        this.username = username;
         this.password = password;
         this.email = email;
+        enabled = true;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return new ArrayList<GrantedAuthority>(){{
-            new SimpleGrantedAuthority("ROLE_USER");
-        }};
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
         return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return login;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
     }
 
     public void setPassword(String password) {
@@ -98,5 +72,29 @@ public class User implements UserDetails {
 
     public List<Notebook> getNotebooks() {
         return notebooks;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public void setNotebooks(List<Notebook> notebooks) {
+        this.notebooks = notebooks;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

@@ -21,7 +21,6 @@ import java.util.List;
  * Created by olegb on 30.01.2017.
  */
 @Controller
-@SessionAttributes("current_user")
 public class NotebookController {
 
     @Autowired
@@ -34,13 +33,8 @@ public class NotebookController {
     private PageService pageService;
 
     @RequestMapping(value = "/notes", method = RequestMethod.GET)
-    public String onNotes(Model model,
-                          @ModelAttribute("current_user") User user) {
+    public String onNotes(Model model) {
 
-        List<Notebook> notebooks = notebookService.list(user.getId());
-
-        model.addAttribute("notebook_list", notebooks);
-        model.addAttribute("current_user", user);
 
         return "notes";
     }

@@ -1,7 +1,6 @@
 package ua.kiev.prog.Entities;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.kiev.prog.Entities.UserContent.User;
@@ -37,8 +36,8 @@ public class UserService {
     }
 
     @Transactional
-    public void addUser(UserDetails user) {
-        userDAO.addUser(user);
+    public void addRole(Role role) {
+        userDAO.addRole(role);
     }
 
     @Transactional

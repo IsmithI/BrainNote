@@ -54,8 +54,8 @@ public class NotebookService {
     }
 
     @Transactional
-    public List<Notebook> list(String login) {
-        return notebookDAO.list(login);
+    public List<Notebook> list(String username) {
+        return notebookDAO.list(username);
     }
 
     @Transactional

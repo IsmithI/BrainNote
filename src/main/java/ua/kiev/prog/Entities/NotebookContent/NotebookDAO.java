@@ -14,7 +14,7 @@ public interface NotebookDAO {
     int getPageCount(long id);
     void updatePageCount(long id);
     List<Notebook> list();
-    List<Notebook> list(String login);
+    List<Notebook> list(String username);
     List<Notebook> list(long userId);
     List<Notebook> list(int num);
 }

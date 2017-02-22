@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page session="true"%>
+
 <html>
 <head>
     <title>Your notes</title>
@@ -10,7 +11,7 @@
 </head>
 <body>
 
-<h1>Hello, ${current_user.login}!</h1>
+<h1>Hello, !</h1>
 
 <div id="notebook_panel" class="panel">
     <p>
@@ -20,14 +21,15 @@
     </form>
     </p>
     <button type="button" id="delete_notebook">Delete selected</button>
-    <a href="/logout">Logout</a>
+    <a href="${pageContext.request.contextPath}/logout">Logout</a>
 </div>
 
 <div id="notebooks">
+
     <c:if test="${not empty notebook_list}">
         <c:forEach var="notebook" items="${notebook_list}">
             <div class="notebook_container" style="background-color: yellow; width: 300px; height: 500px;">
-                    ${notebook.name}<br>
+                    ${notebook.role}<br>
                 Pages: ${notebook.pageNum}<br>
                 <hr>
                 <ul id="pages_navigation_${notebook.id}">
@@ -42,9 +44,9 @@
                             </script>
 
                             <form id="#page_text_form_${page.id}" action="/notes/save_page" method="post">
-                            <textarea rows="5" cols="10" name="text"
+                            <textarea rows="5" cols="10" role="text"
                                       id="page_text_${page.id}">${page.text}</textarea>
-                                <input type="hidden" value="${page.id}" name="id">
+                                <input type="hidden" value="${page.id}" role="id">
                             </form>
 
                             <script>
