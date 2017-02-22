@@ -34,7 +34,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
             (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
         Properties jpaProp = new Properties();					//
-        jpaProp.put("hibernate.hbm2ddl.auto", "update");			//создать с нуля и удалить при завершении
+        jpaProp.put("hibernate.hbm2ddl.auto", "create");			//создать с нуля и удалить при завершении
 
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource);
