@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page session="false"%>
 
 <html>
 <head>
@@ -16,7 +15,9 @@
 
 <div align="center">
 
-    <form action="<c:url value="/index" />" method="post">
+    <c:url value="/j_spring_security_check" var="loginUrl" />
+    
+    <form action="${loginUrl}" method="post">
         Login:<input type="text" name="username"><br>
         Password:<input type="password" name="password"><br>
         <input type="submit"><br>

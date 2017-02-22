@@ -23,18 +23,23 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
-    public ModelAndView onIndex(@RequestParam(required = false, defaultValue = "") String result) {
-
-        ModelAndView model = new ModelAndView();
-
-        if (!result.equals(""))
-            model.addObject("result", result);
-
-        model.setViewName("index");
-
-        return model;
+    @RequestMapping("/index")
+    public String onIndex() {
+        return "index";
     }
+
+//    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
+//    public ModelAndView onIndex(@RequestParam(required = false, defaultValue = "") String result) {
+//
+//        ModelAndView model = new ModelAndView();
+//
+//        if (!result.equals(""))
+//            model.addObject("result", result);
+//
+//        model.setViewName("index");
+//
+//        return model;
+//    }
 
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)

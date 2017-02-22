@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page session="true"%>
 
 <html>
 <head>
@@ -21,7 +20,7 @@
     </form>
     </p>
     <button type="button" id="delete_notebook">Delete selected</button>
-    <a href="${pageContext.request.contextPath}/logout">Logout</a>
+    <a href="/logout">Logout</a>
 </div>
 
 <div id="notebooks">

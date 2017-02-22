@@ -42,15 +42,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .formLogin()
                     .loginPage("/index")
-                    .loginProcessingUrl("/index")
-                    .successForwardUrl("/index?success")
+                    .loginProcessingUrl("/j_spring_security_check")
+                    .usernameParameter("username")
+                    .passwordParameter("password")
+                    .successForwardUrl("/notes")
                     .permitAll()
                 .and()
                     .logout()
                     .logoutSuccessUrl("/index")
                     .permitAll()
                 .and()
-                    .csrf();
+                    .csrf().disable();
     }
 
 //    private CsrfTokenRepository csrfTokenRepository()
