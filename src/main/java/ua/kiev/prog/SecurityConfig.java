@@ -1,7 +1,9 @@
 package ua.kiev.prog;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -35,24 +37,35 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
-                    .antMatchers("/static/**").permitAll()
-                    .antMatchers("/login/**","/register/**").permitAll()
-                    .anyRequest().authenticated()
+        http
+                .csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/notes/**").authenticated()
+                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/register", "/index", "/").permitAll()
                 .and()
-                    .formLogin()
-                    .loginPage("/index")
-                    .loginProcessingUrl("/j_spring_security_check")
-                    .usernameParameter("username")
-                    .passwordParameter("password")
-                    .successForwardUrl("/notes")
-                    .permitAll()
+                .exceptionHandling().accessDeniedPage("/unauthorized")
                 .and()
-                    .logout()
-                    .logoutSuccessUrl("/index")
-                    .permitAll()
+                .formLogin()
+                .loginPage("/index")
+                .loginProcessingUrl("/login")
+                .failureUrl("/index?error")
+                .usernameParameter("j_login")
+                .passwordParameter("j_password")
+                .successForwardUrl("/notes")
+                .permitAll()
                 .and()
-                    .csrf().disable();
+                .logout()
+                .permitAll()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/index?logout")
+                .invalidateHttpSession(true);
+    }
+
+    @Bean(name="authenticationManager")
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
 //    private CsrfTokenRepository csrfTokenRepository()

@@ -14,7 +14,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "users")
-public class User {
+public class MyUser {
 
 
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,9 +33,9 @@ public class User {
     @OneToMany(mappedBy = "role_user", fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
-    public User() {}
+    public MyUser() {}
 
-    public User(String username, String password, String email) {
+    public MyUser(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;

@@ -1,9 +1,8 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
-import ua.kiev.prog.Entities.UserContent.User;
+import ua.kiev.prog.Entities.UserContent.MyUser;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,20 +21,20 @@ public class Notebook {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private User user;
+    private MyUser user;
 
     @OneToMany(mappedBy = "notebook", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Page> pages = new LinkedList<>();
 
     public Notebook() {}
 
-    public Notebook(String name, User user) {
+    public Notebook(String name, MyUser user) {
         this.name = name;
         this.user = user;
         pageNum = 0;
     }
 
-    public User getUser() {
+    public MyUser getUser() {
         return user;
     }
 
@@ -63,7 +62,7 @@ public class Notebook {
         this.pageNum = pageNum;
     }
 
-    public void setUser(User user) {
+    public void setUser(MyUser user) {
         this.user = user;
     }
 

@@ -53,8 +53,8 @@ public class NotebookDAOImpl implements NotebookDAO {
 
     @Override
     public List<Notebook> list(String username) {
-        Query query = entityManager.createQuery("SELECT n FROM Notebook n WHERE n.user.login = :login");
-        query.setParameter("login", username);
+        Query query = entityManager.createQuery("SELECT n FROM Notebook n WHERE n.user.username = :username");
+        query.setParameter("username", username);
         return query.getResultList();
     }
 

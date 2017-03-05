@@ -3,19 +3,20 @@ package ua.kiev.prog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ua.kiev.prog.Entities.NotebookContent.Notebook;
 import ua.kiev.prog.Entities.NotebookContent.Page;
 import ua.kiev.prog.Entities.NotebookService;
 import ua.kiev.prog.Entities.PageService;
-import ua.kiev.prog.Entities.UserContent.User;
+import ua.kiev.prog.Entities.UserContent.MyUser;
 import ua.kiev.prog.Entities.UserService;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by olegb on 30.01.2017.
@@ -32,19 +33,27 @@ public class NotebookController {
     @Autowired
     private PageService pageService;
 
-    @RequestMapping(value = "/notes", method = RequestMethod.GET)
+    @RequestMapping(value = "/notes")
     public String onNotes(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        MyUser dbUser = userService.get(user.getUsername());
+        List<Notebook> dbNotebooks = notebookService.list(user.getUsername());
+
+        model.addAttribute("notebook_list", dbNotebooks);
+        model.addAttribute("login", dbUser.getUsername());
 
 
         return "notes";
     }
 
-    @RequestMapping(value = "/create_notebook", method = RequestMethod.POST)
-    public String onCreateNotebook(Model model,
-                                   @RequestParam String name) {
+    @RequestMapping(value = "/notes/create", method = RequestMethod.POST)
+    public String onCreateNotebook(Model model, @RequestParam String name) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-        User current = (User) model.asMap().get("current_user");
-        Notebook notebook = new Notebook(name, current);
+        MyUser dbUser = userService.get(user.getUsername());
+
+        Notebook notebook = new Notebook(name, dbUser);
 
         notebookService.addNotebook(notebook);
 
@@ -60,38 +69,74 @@ public class NotebookController {
         pageService.addPage(page);
         notebookService.updatePageCount(notebookId);
 
-        return "redirect:/notes";
+        return "/notes";
     }
 
     @RequestMapping(value = "/notes/pages", method = RequestMethod.POST)
     public String onListPages(Model model,
                               @RequestParam Long notebook_id) {
-        List<Page> pages = new LinkedList<>();
+        List<ua.kiev.prog.Entities.NotebookContent.Page> pages = new LinkedList<>();
         pages.addAll(notebookService.get(notebook_id).getPages());
         String pages_json = listToJSON(pages);
 
         model.addAttribute("pages", pages);
         model.addAttribute("pages_json", pages_json);
 
-        return "notes";
-    }
-
-    @RequestMapping(value = "/notes/save_page", method = RequestMethod.POST)
-    public String onSavePages(@RequestParam String text, @RequestParam long id) {
-        pageService.setText(id, text);
         return "redirect:/notes";
     }
 
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public String onLogout(Model model, RedirectAttributes redirectAttributes) {
-        redirectAttributes.getFlashAttributes().remove("current_user");
-        model.asMap().remove("current_user");
-        return "redirect:/";
+    @RequestMapping(value = "/notes/save_pages", method = RequestMethod.POST)
+    public String onSavePages(@RequestParam String text,
+                              @RequestParam Long id) {
+        pageService.setText(id, text);
+
+        return "redirect:/notes";
     }
+
+//    @RequestMapping(value = "/notes/save_pages", method = RequestMethod.POST)
+//    public String onSavePages(@RequestParam(value = "ids[]", required = false) String[] ids,
+//                              @RequestParam(value = "values[]", required = false) String[] values) {
+//
+//        for(int i = 0; i < ids.length; i++) {
+//            pageService.setText(Long.parseLong(ids[i]), values[i]);
+//        }
+//
+//
+//        return "/notes";
+//    }
+
+//    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+//    public String onLogout(Model model, RedirectAttributes redirectAttributes) {
+//        redirectAttributes.getFlashAttributes().remove("current_user");
+//        model.asMap().remove("current_user");
+//        return "redirect:/";
+//    }
 
     private String listToJSON(List list) {
         Gson gson = new GsonBuilder().create();
         return gson.toJson(list);
     }
+
+    private class Pages {
+        private List<Long> ids;
+        private List<String> values;
+
+        public List<Long> getIds() {
+            return ids;
+        }
+
+        public void setIds(List<Long> ids) {
+            this.ids = ids;
+        }
+
+        public List<String> getValues() {
+            return values;
+        }
+
+        public void setValues(List<String> values) {
+            this.values = values;
+        }
+    }
+
 
 }

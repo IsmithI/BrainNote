@@ -1,7 +1,5 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
-import ua.kiev.prog.Entities.UserContent.User;
-
 import java.util.List;
 
 /**

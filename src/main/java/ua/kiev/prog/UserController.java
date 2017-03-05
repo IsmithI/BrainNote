@@ -1,6 +1,12 @@
 package ua.kiev.prog;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,11 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ua.kiev.prog.Entities.Role;
-import ua.kiev.prog.Entities.UserContent.User;
+import ua.kiev.prog.Entities.UserContent.MyUser;
 import ua.kiev.prog.Entities.UserService;
+import org.springframework.security.core.userdetails.User;
 
-import javax.xml.ws.http.HTTPBinding;
-import java.util.HashSet;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by smith on 29.01.17.
@@ -23,8 +30,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/index")
-    public String onIndex() {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @RequestMapping({"/index", "/"})
+    public String onIndex(Model model) {
         return "index";
     }
 
@@ -56,20 +67,39 @@ public class UserController {
             @RequestParam String username,
             @RequestParam String password,
             @RequestParam String password_repeat,
-            @RequestParam String email
+            @RequestParam String email,
+            HttpServletRequest request
             ) {
 
-        User user = new User(username, password, email);
+        MyUser user = new MyUser(username, password, email);
         Role role = new Role(user, Utils.ROLE_USER);
         user.getRoles().add(role);
 
-        if (userService.userLoginExists(user) || !password.equals(password_repeat))
-            return new ModelAndView("register", "result", "Authentication failed!");
+//        if (userService.userLoginExists(user) || !password.equals(password_repeat))
+//            return new ModelAndView("register", "result", "Authentication failed!");
 
         userService.addUser(user);
         userService.addRole(role);
 
-        return new ModelAndView("/register");
+
+
+        authenticateUserAndSetSession(user, request);
+
+        return new ModelAndView("redirect:/notes");
+    }
+
+    private void authenticateUserAndSetSession(MyUser user, HttpServletRequest request) {
+        String username = user.getUsername();
+        String password = user.getPassword();
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+
+        // generate session if one doesn't exist
+        request.getSession();
+
+        token.setDetails(new WebAuthenticationDetails(request));
+        Authentication authenticatedUser = authenticationManager.authenticate(token);
+
+        SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
     }
 
 //
@@ -78,7 +108,7 @@ public class UserController {
 //                                @RequestParam String password,
 //                                RedirectAttributes redirectAttributes) {
 //
-//        User user = userService.login(login, password);
+//        MyUser user = userService.login(login, password);
 //
 //        if (user != null) {
 //            redirectAttributes.addFlashAttribute("current_user", user);

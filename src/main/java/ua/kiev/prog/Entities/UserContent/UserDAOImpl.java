@@ -17,7 +17,7 @@ public class UserDAOImpl implements UserDAO {
     private EntityManager entityManager;
 
     @Override
-    public void addUser(User user) {
+    public void addUser(MyUser user) {
         entityManager.merge(user);
     }
 
@@ -28,38 +28,43 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void deleteUsers(long[] ids) {
-        User u;
+        MyUser u;
         for (long id : ids) {
-            u = entityManager.getReference(User.class, id);
+            u = entityManager.getReference(MyUser.class, id);
             entityManager.remove(u);
         }
     }
 
     @Override
-    public User get(long id) {
-        return entityManager.find(User.class, id);
+    public MyUser get(long id) {
+        return entityManager.find(MyUser.class, id);
     }
 
     @Override
-    public User login(User user, String password) {
-        User tmp = entityManager.getReference(User.class, user);
+    public MyUser get(String username) {
+        return entityManager.find(MyUser.class, username);
+    }
+
+    @Override
+    public MyUser login(MyUser user, String password) {
+        MyUser tmp = entityManager.getReference(MyUser.class, user);
         if (tmp.getPassword().equals(password))
             return tmp;
         else return null;
     }
 
     @Override
-    public User login(long id, String password) {
-        User tmp = entityManager.getReference(User.class, id);
+    public MyUser login(long id, String password) {
+        MyUser tmp = entityManager.getReference(MyUser.class, id);
         if (tmp.getPassword().equals(password))
             return tmp;
         else return null;
     }
 
     @Override
-    public User login(String username, String password) {
-        List<User> users = entityManager.createQuery("SELECT u FROM User u").getResultList();
-        for (User user : users) {
+    public MyUser login(String username, String password) {
+        List<MyUser> users = entityManager.createQuery("SELECT u FROM MyUser u").getResultList();
+        for (MyUser user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 return user;
             }
@@ -68,9 +73,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean userLoginExists(User user) {
-        List<User> users = entityManager.createQuery("SELECT u FROM User u").getResultList();
-        for (User u : users) {
+    public boolean userLoginExists(MyUser user) {
+        List<MyUser> users = entityManager.createQuery("SELECT u FROM MyUser u").getResultList();
+        for (MyUser u : users) {
             if (u.getUsername().equals(user.getUsername()))
                 return true;
         }

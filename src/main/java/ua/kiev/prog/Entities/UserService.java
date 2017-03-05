@@ -3,7 +3,7 @@ package ua.kiev.prog.Entities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ua.kiev.prog.Entities.UserContent.User;
+import ua.kiev.prog.Entities.UserContent.MyUser;
 import ua.kiev.prog.Entities.UserContent.UserDAO;
 
 /**
@@ -16,7 +16,7 @@ public class UserService {
     private UserDAO userDAO;
 
     @Transactional
-    public boolean userLoginExists(User user) {
+    public boolean userLoginExists(MyUser user) {
         return userDAO.userLoginExists(user);
     }
 
@@ -26,12 +26,17 @@ public class UserService {
     }
 
     @Transactional
-    public User get(long id) {
+    public MyUser get(long id) {
         return userDAO.get(id);
     }
 
     @Transactional
-    public void addUser(User user) {
+    public MyUser get(String username) {
+        return userDAO.get(username);
+    }
+
+    @Transactional
+    public void addUser(MyUser user) {
         userDAO.addUser(user);
     }
 
@@ -46,17 +51,17 @@ public class UserService {
     }
 
     @Transactional
-    public User login(User user, String password) {
+    public MyUser login(MyUser user, String password) {
         return userDAO.login(user, password);
     }
 
     @Transactional
-    public User login(String login, String password) {
+    public MyUser login(String login, String password) {
         return userDAO.login(login, password);
     }
 
     @Transactional
-    public User login(long id, String password) {
+    public MyUser login(long id, String password) {
         return userDAO.login(id, password);
     }
 

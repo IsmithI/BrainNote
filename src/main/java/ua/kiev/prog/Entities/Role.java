@@ -1,9 +1,8 @@
 package ua.kiev.prog.Entities;
 
-import ua.kiev.prog.Entities.UserContent.User;
+import ua.kiev.prog.Entities.UserContent.MyUser;
 
 import javax.persistence.*;
-import java.util.Set;
 
 /**
  * Created by Smith on 20.02.2017.
@@ -19,7 +18,7 @@ public class Role {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "username")
-    private User role_user;
+    private MyUser role_user;
 
     public Long getId() {
         return id;
@@ -27,7 +26,7 @@ public class Role {
 
     public Role() {}
 
-    public Role(User user, String role) {
+    public Role(MyUser user, String role) {
         this.role = role;
         this.role_user = user;
     }
@@ -44,11 +43,11 @@ public class Role {
         this.role = role;
     }
 
-    public User getRole_user() {
+    public MyUser getRole_user() {
         return role_user;
     }
 
-    public void setRole_user(User role_user) {
+    public void setRole_user(MyUser role_user) {
         this.role_user = role_user;
     }
 }
