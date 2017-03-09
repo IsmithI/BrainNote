@@ -63,13 +63,39 @@ public class NotebookController {
 
     @RequestMapping("/notes/add_page_{id}")
     public String onAddPage(@PathVariable("id") long notebookId, Model model) {
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        MyUser myUser = userService.get(user.getUsername());
         Notebook notebook = notebookService.get(notebookId);
+
+        if (!notebook.getUser().getUsername().equals(myUser.getUsername()))
+            return "/403";
+
         Page page = new Page(notebook, notebook.getPages().size() + 1);
 
         pageService.addPage(page);
         notebookService.updatePageCount(notebookId);
 
-        return "/notes";
+        return "redirect:/notes";
+    }
+
+    @RequestMapping("/notes/delete_{id}")
+    public String onDelete(@PathVariable("id") long notebookId, Model model) {
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        MyUser myUser = userService.get(user.getUsername());
+        Notebook notebook = notebookService.get(notebookId);
+
+        if (!notebook.getUser().getUsername().equals(myUser.getUsername()))
+            return "/403";
+
+        notebookService.deleteNotebook(notebookId);
+
+        List<Notebook> dbNotebooks = notebookService.list(user.getUsername());
+
+        model.asMap().put("notebook_list", dbNotebooks);
+
+        return "redirect:/notes";
     }
 
     @RequestMapping(value = "/notes/pages", method = RequestMethod.POST)

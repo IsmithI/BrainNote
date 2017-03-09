@@ -36,6 +36,13 @@ public class NotebookDAOImpl implements NotebookDAO {
     }
 
     @Override
+    public void deleteNotebook(long id) {
+        Notebook notebook;
+        notebook = entityManager.getReference(Notebook.class, id);
+        entityManager.remove(notebook);
+    }
+
+    @Override
     public int getPageCount(long id) {
         return entityManager.getReference(Notebook.class, id).getPages().size();
     }

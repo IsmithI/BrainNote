@@ -44,6 +44,11 @@ public class NotebookService {
     }
 
     @Transactional
+    public void deleteNotebook(long id) {
+        notebookDAO.deleteNotebook(id);
+    }
+
+    @Transactional
     public List<Notebook> list() {
         return notebookDAO.list();
     }

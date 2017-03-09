@@ -9,6 +9,9 @@ public interface NotebookDAO {
     Notebook get(long id);
     void addNotebook(Notebook notebook);
     void deleteNotebook(long[] id);
+
+    void deleteNotebook(long id);
+
     int getPageCount(long id);
     void updatePageCount(long id);
     List<Notebook> list();
