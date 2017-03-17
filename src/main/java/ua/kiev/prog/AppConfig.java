@@ -11,6 +11,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -28,6 +29,8 @@ import java.util.Properties;
 @Import({SecurityConfig.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
+    private int maxUploadSizeInMb = 20 * 1024 * 1024; //20Mb
+
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
             (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
@@ -44,7 +47,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory emf) { 
+    public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);					//реализация интерфейса для транзакций
     }
 
@@ -85,4 +88,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
                 .addResourceHandler("/static/**")
                 .addResourceLocations("/static/");
     }
+
+    @Bean
+    public CommonsMultipartResolver multipartResolver() {
+
+        CommonsMultipartResolver cmr = new CommonsMultipartResolver();
+        cmr.setMaxUploadSize(maxUploadSizeInMb * 2);
+        cmr.setMaxUploadSizePerFile(maxUploadSizeInMb); //bytes
+        return cmr;
+
+    }
+
 }

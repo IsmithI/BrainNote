@@ -3,12 +3,15 @@ package ua.kiev.prog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+import ua.kiev.prog.Entities.ImageContent.Image;
+import ua.kiev.prog.Entities.ImageService;
 import ua.kiev.prog.Entities.NotebookContent.Notebook;
 import ua.kiev.prog.Entities.NotebookContent.Page;
 import ua.kiev.prog.Entities.NotebookService;
@@ -16,6 +19,9 @@ import ua.kiev.prog.Entities.PageService;
 import ua.kiev.prog.Entities.UserContent.MyUser;
 import ua.kiev.prog.Entities.UserService;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -26,9 +32,10 @@ public class NotebookController {
 
     @Autowired
     private UserService userService;
-
     @Autowired
     private NotebookService notebookService;
+    @Autowired
+    private ImageService imageService;
 
     @Autowired
     private PageService pageService;
@@ -42,7 +49,6 @@ public class NotebookController {
 
         model.addAttribute("notebook_list", dbNotebooks);
         model.addAttribute("login", dbUser.getUsername());
-
 
         return "notes";
     }
@@ -63,7 +69,7 @@ public class NotebookController {
 
     @RequestMapping("/notes/add_page_{id}")
     public String onAddPage(@PathVariable("id") long notebookId, Model model) {
-        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         MyUser myUser = userService.get(user.getUsername());
         Notebook notebook = notebookService.get(notebookId);
@@ -76,12 +82,22 @@ public class NotebookController {
         pageService.addPage(page);
         notebookService.updatePageCount(notebookId);
 
-        return "redirect:/notes";
+
+        List<Notebook> dbNotebooks = notebookService.list(user.getUsername());
+        model.addAttribute("notebook_list", dbNotebooks);
+
+        return "/notes";
+    }
+
+    @RequestMapping("/notes/pageNum_{id}")
+    @ResponseBody public String onGetPageNum(@PathVariable long id) {
+        Notebook notebook = notebookService.get(id);
+        return String.valueOf(notebook.getPageNum());
     }
 
     @RequestMapping("/notes/delete_{id}")
     public String onDelete(@PathVariable("id") long notebookId, Model model) {
-        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         MyUser myUser = userService.get(user.getUsername());
         Notebook notebook = notebookService.get(notebookId);
@@ -112,31 +128,50 @@ public class NotebookController {
     }
 
     @RequestMapping(value = "/notes/save_pages", method = RequestMethod.POST)
-    public String onSavePages(@RequestParam String text,
+    @ResponseBody public String onSavePages(@RequestParam String text,
                               @RequestParam Long id) {
         pageService.setText(id, text);
 
-        return "redirect:/notes";
+        return "OK";
     }
 
-//    @RequestMapping(value = "/notes/save_pages", method = RequestMethod.POST)
-//    public String onSavePages(@RequestParam(value = "ids[]", required = false) String[] ids,
-//                              @RequestParam(value = "values[]", required = false) String[] values) {
-//
-//        for(int i = 0; i < ids.length; i++) {
-//            pageService.setText(Long.parseLong(ids[i]), values[i]);
-//        }
-//
-//
-//        return "/notes";
-//    }
+    @RequestMapping("/notes/upload")
+    public ModelAndView onUpload(@RequestParam MultipartFile uploadImage,
+                                 @RequestParam Long pageId) throws IOException {
+        if (uploadImage != null) {
+            Page page = pageService.get(pageId);
 
-//    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-//    public String onLogout(Model model, RedirectAttributes redirectAttributes) {
-//        redirectAttributes.getFlashAttributes().remove("current_user");
-//        model.asMap().remove("current_user");
-//        return "redirect:/";
-//    }
+            Image image = new Image(page, uploadImage.getBytes());
+
+            imageService.uploadImage(image);
+        }
+
+        return new ModelAndView("notes");
+    }
+
+    @RequestMapping(value = "/notes/image", method = RequestMethod.GET)
+    public void onImage(@RequestParam Long imageId,
+                        HttpServletRequest request,
+                        HttpServletResponse response) throws IOException {
+        Image image = imageService.get(imageId);
+
+        response.setContentType("image/jpeg, image/jpg, image/png, image/gif");
+        response.getOutputStream().write(image.getImage());
+
+        response.getOutputStream().close();
+    }
+
+
+    @RequestMapping(value = "/notes/image/last")
+    @ResponseBody public String getLastImageId(
+            @RequestParam Long pageId,
+            HttpServletResponse response) throws IOException {
+
+        Page page = pageService.get(pageId);
+        Image image = imageService.getLastUploadedImage(page);
+
+        return String.valueOf(image.getId());
+    }
 
     private String listToJSON(List list) {
         Gson gson = new GsonBuilder().create();

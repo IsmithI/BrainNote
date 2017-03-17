@@ -1,6 +1,6 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
-import ua.kiev.prog.Entities.NotebookContent.Notebook;
+import ua.kiev.prog.Entities.ImageContent.Image;
 
 import javax.persistence.*;
 import java.util.ArrayList;

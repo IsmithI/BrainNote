@@ -49,7 +49,7 @@ public class NotebookDAOImpl implements NotebookDAO {
 
     @Override
     public void updatePageCount(long id) {
-        Notebook notebook = entityManager.getReference(Notebook.class, id);
+        Notebook notebook = entityManager.find(Notebook.class, id);
         notebook.setPageNum(notebook.getPages().size());
     }
 

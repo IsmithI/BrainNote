@@ -1,7 +1,7 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import ua.kiev.prog.Entities.ImageContent.Image;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,7 +19,7 @@ public class PageDAOImpl implements PageDAO{
 
     @Override
     public Page get(long id) {
-        return entityManager.getReference(Page.class, id);
+        return entityManager.find(Page.class, id);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class PageDAOImpl implements PageDAO{
 
     @Override
     public int getPageNum(long id) {
-        Page page = entityManager.getReference(Page.class, id);
+        Page page = entityManager.find(Page.class, id);
         return page.getPage_n();
     }
 

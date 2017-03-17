@@ -3,6 +3,7 @@ package ua.kiev.prog.Entities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.kiev.prog.Entities.ImageContent.Image;
 import ua.kiev.prog.Entities.NotebookContent.Page;
 import ua.kiev.prog.Entities.NotebookContent.PageDAO;
 
@@ -51,4 +52,5 @@ public class PageService {
     public List<Page> list(long notebook_id) {
         return pageDAO.list(notebook_id);
     }
+
 }

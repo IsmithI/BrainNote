@@ -1,5 +1,7 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
+import ua.kiev.prog.Entities.ImageContent.Image;
+
 import java.util.List;
 
 /**
