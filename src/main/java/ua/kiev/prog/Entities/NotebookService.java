@@ -68,4 +68,14 @@ public class NotebookService {
         return notebookDAO.list(userId);
     }
 
+    @Transactional
+    public void changeNotebookName(long id, String name) {
+        notebookDAO.changeName(id, name);
+    }
+
+    @Transactional
+    public void setColor(long id, String color) {
+        notebookDAO.setColor(id, color);
+    }
+
 }

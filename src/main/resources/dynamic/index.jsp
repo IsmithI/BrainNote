@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--Google fonts--%>
-<link href='//fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<%--<link href='//fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>--%>
 
 <html>
 <head>
@@ -17,20 +17,20 @@
 
     <div id="header">
 
-            <div class="form" id="login-form" style="top: 100px; right: 65px;">
+        <div class="form" id="login-form" style="top: 100px; right: 65px;">
 
-                <h2>Log in</h2>
+            <h2>Log in</h2>
 
-                <c:url value="/login" var="loginUrl"/>
+            <c:url value="/login" var="loginUrl"/>
 
-                <form action="${loginUrl}" method="post">
-                    <p class="input">Login:<input type="text" name="j_login"><br>
-                    </p>
-                    <p class="input">Password:<input type="password" name="j_password"><br>
-                        <input type="submit" value="Take some notes!"><br>
-                    </p>
-                </form>
-            </div>
+            <form action="${loginUrl}" method="post">
+                <p class="input">Login:<input type="text" name="j_login"><br>
+                </p>
+                <p class="input">Password:<input type="password" name="j_password"><br>
+                    <input type="submit" value="Take some notes!"><br>
+                </p>
+            </form>
+        </div>
 
     </div>
 
@@ -46,7 +46,9 @@
                 <input type="hidden" name="${_csrf.parameterName}"
                        value="${_csrf.token}"/>
             </form>
-            <button id="confirm_register" type="button" style="margin-left: 160px; margin-top: -8px;">Create an account</button>
+            <button id="confirm_register" type="button" style="margin-left: 160px; margin-top: -8px;">Create an
+                account
+            </button>
             <p id="info" style="font-size: 18px; color: #ff6b2c;" align="center"></p>
 
 
@@ -58,6 +60,12 @@
     </button>
 
     <button type="button" id="back">Back to login</button>
+
+    <c:if test="${result ne null}">
+        <div id="result">
+                ${result}
+        </div>
+    </c:if>
 
 </div>
 <script>
@@ -71,7 +79,7 @@
 
             if (password != password_repeat)
                 $("#info").text("Passwords don't match!");
-            else if(username == "" || hasWhiteSpaces(username))
+            else if (username == "" || hasWhiteSpaces(username))
                 $("#info").text("Login must not have spaces or be empty!");
             else $("#register_form").submit();
         });
@@ -148,7 +156,6 @@
             }
         );
     }
-
 
 
 </script>

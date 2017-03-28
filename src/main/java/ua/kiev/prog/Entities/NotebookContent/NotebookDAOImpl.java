@@ -1,6 +1,7 @@
 package ua.kiev.prog.Entities.NotebookContent;
 
 import org.springframework.stereotype.Repository;
+import ua.kiev.prog.Utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,6 +24,8 @@ public class NotebookDAOImpl implements NotebookDAO {
 
     @Override
     public void addNotebook(Notebook notebook) {
+        int rnd = (int) (Math.random()*Utils.COLORS.length);
+        notebook.setColor(Utils.COLORS[rnd]);
         entityManager.merge(notebook);
     }
 
@@ -49,7 +52,7 @@ public class NotebookDAOImpl implements NotebookDAO {
 
     @Override
     public void updatePageCount(long id) {
-        Notebook notebook = entityManager.find(Notebook.class, id);
+        Notebook notebook = entityManager.getReference(Notebook.class, id);
         notebook.setPageNum(notebook.getPages().size());
     }
 
@@ -78,5 +81,17 @@ public class NotebookDAOImpl implements NotebookDAO {
         for (int i = tmp.size(); i > num; i--)
             tmp.remove(i);
         return tmp;
+    }
+
+    @Override
+    public void changeName(long id, String name) {
+        Notebook notebook = entityManager.find(Notebook.class, id);
+        notebook.setName(name);
+    }
+
+    @Override
+    public void setColor(long id, String color) {
+        Notebook notebook = entityManager.find(Notebook.class, id);
+        notebook.setColor(color);
     }
 }

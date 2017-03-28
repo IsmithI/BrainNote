@@ -17,13 +17,14 @@ public class Notebook {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+    private String color;
     private int pageNum;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private MyUser user;
 
-    @OneToMany(mappedBy = "notebook", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "notebook", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<Page> pages = new LinkedList<>();
 
     public Notebook() {}
@@ -32,6 +33,16 @@ public class Notebook {
         this.name = name;
         this.user = user;
         pageNum = 0;
+    }
+
+    public void deletePage(Page page) {
+        for (int i = pages.size()-1; ;i--) {
+            if (pages.get(i).equals(page)) break;
+            pages.get(i).setPage_n(pages.get(i).getPage_n()-1);
+        }
+
+        pages.remove(page);
+        page.setNotebook(null);
     }
 
     public MyUser getUser() {
@@ -68,5 +79,13 @@ public class Notebook {
 
     public void setPages(List<Page> pages) {
         this.pages = pages;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

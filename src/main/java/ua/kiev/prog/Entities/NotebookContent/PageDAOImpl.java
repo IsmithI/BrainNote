@@ -29,11 +29,12 @@ public class PageDAOImpl implements PageDAO{
     }
 
     @Override
-    public void deletePages(long[] ids) {
+    public void deletePages(long notebookId, long[] ids) {
+        Notebook notebook = entityManager.find(Notebook.class, notebookId);
         Page page;
         for (long i : ids) {
             page = entityManager.getReference(Page.class, i);
-            entityManager.remove(page);
+            notebook.deletePage(page);
         }
     }
 

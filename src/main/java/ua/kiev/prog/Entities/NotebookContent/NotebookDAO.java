@@ -18,4 +18,7 @@ public interface NotebookDAO {
     List<Notebook> list(String username);
     List<Notebook> list(long userId);
     List<Notebook> list(int num);
+
+    void changeName(long id, String name);
+    void setColor(long id, String color);
 }

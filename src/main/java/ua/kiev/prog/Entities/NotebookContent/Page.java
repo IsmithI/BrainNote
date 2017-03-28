@@ -17,7 +17,7 @@ public class Page {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(columnDefinition = "text")
+    @Column(columnDefinition = "text", length = 1000)
     private String text;
 
     @ManyToOne(fetch = FetchType.EAGER)

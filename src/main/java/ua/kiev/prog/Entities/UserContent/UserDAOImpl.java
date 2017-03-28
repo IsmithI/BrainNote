@@ -1,11 +1,14 @@
 package ua.kiev.prog.Entities.UserContent;
 
 import org.springframework.stereotype.Repository;
+import ua.kiev.prog.Entities.NotebookContent.Notebook;
 import ua.kiev.prog.Entities.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by smith on 29.01.17.
@@ -27,12 +30,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void deleteUsers(long[] ids) {
-        MyUser u;
-        for (long id : ids) {
-            u = entityManager.getReference(MyUser.class, id);
-            entityManager.remove(u);
-        }
+    public void deleteUser(String username) {
+        MyUser u = entityManager.getReference(MyUser.class, username);
+        entityManager.remove(u);
     }
 
     @Override
@@ -71,6 +71,13 @@ public class UserDAOImpl implements UserDAO {
         }
         return null;
     }
+
+    @Override
+    public void changePassword(String username, String newPassword) {
+        MyUser myUser = entityManager.getReference(MyUser.class, username);
+        myUser.setPassword(newPassword);
+    }
+
 
     @Override
     public boolean userLoginExists(MyUser user) {

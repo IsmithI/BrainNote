@@ -3,21 +3,24 @@ package ua.kiev.prog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import ua.kiev.prog.Entities.*;
 import ua.kiev.prog.Entities.ImageContent.Image;
-import ua.kiev.prog.Entities.ImageService;
 import ua.kiev.prog.Entities.NotebookContent.Notebook;
 import ua.kiev.prog.Entities.NotebookContent.Page;
-import ua.kiev.prog.Entities.NotebookService;
-import ua.kiev.prog.Entities.PageService;
 import ua.kiev.prog.Entities.UserContent.MyUser;
-import ua.kiev.prog.Entities.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,12 +39,14 @@ public class NotebookController {
     private NotebookService notebookService;
     @Autowired
     private ImageService imageService;
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     @Autowired
     private PageService pageService;
 
     @RequestMapping(value = "/notes")
-    public String onNotes(Model model) {
+    public String onNotes(Model model, @RequestParam(required = false) String message) {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         MyUser dbUser = userService.get(user.getUsername());
@@ -49,6 +54,11 @@ public class NotebookController {
 
         model.addAttribute("notebook_list", dbNotebooks);
         model.addAttribute("login", dbUser.getUsername());
+        model.addAttribute("email", dbUser.getEmail());
+
+        if (message != null) {
+            model.addAttribute("result", message);
+        }
 
         return "notes";
     }
@@ -67,8 +77,8 @@ public class NotebookController {
     }
 
 
-    @RequestMapping("/notes/add_page_{id}")
-    public String onAddPage(@PathVariable("id") long notebookId, Model model) {
+    @RequestMapping("/notes/add_page")
+    public String onAddPage(@RequestParam long notebookId) {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         MyUser myUser = userService.get(user.getUsername());
@@ -82,17 +92,7 @@ public class NotebookController {
         pageService.addPage(page);
         notebookService.updatePageCount(notebookId);
 
-
-        List<Notebook> dbNotebooks = notebookService.list(user.getUsername());
-        model.addAttribute("notebook_list", dbNotebooks);
-
-        return "/notes";
-    }
-
-    @RequestMapping("/notes/pageNum_{id}")
-    @ResponseBody public String onGetPageNum(@PathVariable long id) {
-        Notebook notebook = notebookService.get(id);
-        return String.valueOf(notebook.getPageNum());
+        return "redirect:/notes";
     }
 
     @RequestMapping("/notes/delete_{id}")
@@ -127,12 +127,14 @@ public class NotebookController {
         return "redirect:/notes";
     }
 
-    @RequestMapping(value = "/notes/save_pages", method = RequestMethod.POST)
+    @RequestMapping(value = "/notes/save_pages")
     @ResponseBody public String onSavePages(@RequestParam String text,
-                              @RequestParam Long id) {
-        pageService.setText(id, text);
+                                            @RequestParam String id) {
+        System.out.println(text);
 
-        return "OK";
+        pageService.setText(Long.parseLong(id), text);
+
+        return "" + text;
     }
 
     @RequestMapping("/notes/upload")
@@ -173,31 +175,67 @@ public class NotebookController {
         return String.valueOf(image.getId());
     }
 
+    @RequestMapping(value = "/notes/changePassword")
+    public ModelAndView onPasswordChange(@RequestParam String old_password,
+                                         @RequestParam String new_password,
+                                         @RequestParam String repeat_password,
+                                         HttpServletRequest request,
+                                         RedirectAttributes attributes) {
+        ModelAndView model = new ModelAndView();
+
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        MyUser myUser = userService.get(user.getUsername());
+
+        String result;
+
+        if (!old_password.equals(myUser.getPassword())) {
+            result = "Wrong old password!";
+            model.setViewName("redirect:/notes?message=" + result);
+            return model;
+        }
+        if (!new_password.equals(repeat_password)) {
+            result = "Passwords don't match!";
+            model.setViewName("redirect:/notes?message=" + result);
+            return model;
+        }
+
+        userService.changePassword(myUser.getUsername(), new_password);
+
+        Utils.authenticateUserAndSetSession(myUser, request, authenticationManager);
+        result = "Password changed successfully";
+        model.setViewName("redirect:/index?message=" + result);
+
+        return model;
+    }
+
+    @RequestMapping(value = "/notes/pages/delete", method = RequestMethod.POST)
+    public String onPageDelete(@RequestParam long notebookId,
+                               @RequestParam(value = "ids[]") long[] ids) {
+        pageService.deletePages(notebookId, ids);
+        notebookService.updatePageCount(notebookId);
+
+        return "redirect:/notes";
+    }
+
+    @RequestMapping(value = "/notes/changeNotebookName", method = RequestMethod.POST)
+    public String onNotebookChangeName(@RequestParam String name, @RequestParam long id) {
+        notebookService.changeNotebookName(id, name);
+
+        return "redirect:/notes";
+    }
+
+    @RequestMapping(value = "/notes/changeNotebookColor", method = RequestMethod.POST)
+    @ResponseBody public String onNotebookChangeColor(@RequestParam String color, @RequestParam long id) {
+        notebookService.setColor(id, color);
+
+        return "/notes";
+    }
+
     private String listToJSON(List list) {
         Gson gson = new GsonBuilder().create();
         return gson.toJson(list);
     }
 
-    private class Pages {
-        private List<Long> ids;
-        private List<String> values;
-
-        public List<Long> getIds() {
-            return ids;
-        }
-
-        public void setIds(List<Long> ids) {
-            this.ids = ids;
-        }
-
-        public List<String> getValues() {
-            return values;
-        }
-
-        public void setValues(List<String> values) {
-            this.values = values;
-        }
-    }
 
 
 }

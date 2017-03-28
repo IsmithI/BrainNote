@@ -34,8 +34,8 @@ public class PageService {
     }
 
     @Transactional
-    public void deletePages(long[] ids) {
-        pageDAO.deletePages(ids);
+    public void deletePages(long notebookId, long[] ids) {
+        pageDAO.deletePages(notebookId, ids);
     }
 
     @Transactional

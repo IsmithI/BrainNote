@@ -8,12 +8,13 @@ import ua.kiev.prog.Entities.Role;
 public interface UserDAO {
     void addUser(MyUser user);
     void addRole(Role role);
-    void deleteUsers(long[] ids);
+    void deleteUser(String username);
     MyUser get(long id);
     MyUser get(String username);
     MyUser login(MyUser user, String password);
     MyUser login(long id, String password);
     MyUser login(String username, String password);
+    void changePassword(String username, String newPassword);
     boolean userLoginExists(MyUser user);
     boolean userLoginExists(String username);
 }

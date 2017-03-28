@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ua.kiev.prog.Entities.Role;
 import ua.kiev.prog.Entities.UserContent.MyUser;
 import ua.kiev.prog.Entities.UserService;
@@ -35,23 +36,13 @@ public class UserController {
     private AuthenticationManager authenticationManager;
 
     @RequestMapping({"/index", "/"})
-    public String onIndex(Model model) {
+    public String onIndex(Model model, @RequestParam(required = false) String message) {
+        if (message != null) {
+            model.addAttribute("result", message);
+        }
+
         return "index";
     }
-
-//    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
-//    public ModelAndView onIndex(@RequestParam(required = false, defaultValue = "") String result) {
-//
-//        ModelAndView model = new ModelAndView();
-//
-//        if (!result.equals(""))
-//            model.addObject("result", result);
-//
-//        model.setViewName("index");
-//
-//        return model;
-//    }
-
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String onRegister(Model model,
@@ -82,24 +73,9 @@ public class UserController {
         userService.addRole(role);
 
 
-
-        authenticateUserAndSetSession(user, request);
+        Utils.authenticateUserAndSetSession(user, request, authenticationManager);
 
         return new ModelAndView("redirect:/notes");
-    }
-
-    private void authenticateUserAndSetSession(MyUser user, HttpServletRequest request) {
-        String username = user.getUsername();
-        String password = user.getPassword();
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
-
-        // generate session if one doesn't exist
-        request.getSession();
-
-        token.setDetails(new WebAuthenticationDetails(request));
-        Authentication authenticatedUser = authenticationManager.authenticate(token);
-
-        SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
     }
 
 //

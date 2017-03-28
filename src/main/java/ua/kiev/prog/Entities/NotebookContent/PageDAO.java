@@ -10,7 +10,7 @@ import java.util.List;
 public interface PageDAO {
     Page get(long id);
     Page addPage(Page page);
-    void deletePages(long[] ids);
+    void deletePages(long notebookId, long[] ids);
     int getPageNum(long id);
     List<Page> list();
     List<Page> list(long notebook_id);

@@ -1,6 +1,12 @@
+@font-face {
+    font-family: Amarante;
+    src: url("fonts/Amarante-Regular.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Amarante', serif;
 }
 body {
     background: url(images/background.jpg) repeat left top;
@@ -22,7 +28,6 @@ body {
 
     margin: 0 auto;
 
-    font-family: 'Amarante', serif;
     font-size: 72px;
     color: whitesmoke;
 }
@@ -36,7 +41,6 @@ body {
     height: 300px;
     padding: 60px 0 0 40px;
 
-    font-family: 'Amarante', serif;
     font-size: 22px;
 
     background: url(images/sticky_note.png) no-repeat;
@@ -60,13 +64,27 @@ body {
     width: inherit;
     box-sizing: border-box;
 
-    font-family: 'Amarante', serif;
     font-size: 16px;
     color: black;
 
     background-color: #fff8d2;
     border: 2px solid #aaa;
     border-radius: 6px;
+}
+
+
+#result {
+    background: url("images/label.png") no-repeat;
+
+    position: fixed;
+    width: 256px;
+    height: 36px;
+
+    left: 0;
+    top: 0;
+
+    text-align: center;
+    font-size: 18px;
 }
 
 #back {
@@ -102,7 +120,6 @@ body {
 }
 
 #button_register p {
-    font-family: 'Amarante', serif;
     font-size: 28px;
     vertical-align: middle;
 }
@@ -114,7 +131,6 @@ body {
     width: 850px;
     height: 1100px;
 
-    font-family: 'Amarante', serif;
     font-size: 24px;
     color: black;
 }
@@ -150,16 +166,18 @@ body {
 
 #notebooks {
     height: auto;
-    margin: 50px;
+    margin: 0 50px 50px;
 }
 
 .notebook_wrapper {
     background: orange;
     width: 400px;
-    height: 500px;
+    height: 600px;
+
+    border-radius: 15px;
 
     margin: 25px;
-    padding:10px;
+    padding: 20px 20px 86px;
     display: inline-block;
 
     position: relative;
@@ -175,29 +193,74 @@ body {
 
 .navigation {
     position: absolute;
-    bottom: 0;
+    height: auto;
+    top: 580px;
 }
 
 .page_num {
     display: inline-block;
+    width: auto;
+    min-width: 36px;
+    background: #2d8ac7;
+    border-radius: 8px;
+    text-align: center;
+
+    font-size: 18px;
 }
 
 .options_button {
     display: inline-block;
 }
 
+.options_panel {
+    background: url("images/options_panel.png") no-repeat;
 
-input {
+    width: 400px;
+    height: 256px;
+
+    position: absolute;
+    top: 68px;
+
+    z-index: 2;
+
+    visibility: hidden;
+}
+
+h3>p {
+    margin-bottom: 5px;
+}
+
+
+input, button {
     border: none;
     outline: none;
     text-decoration: none;
+    padding: 8px;
+    margin: 8px 0;
 }
 
-input:focus {
+input:focus, button:focus {
     border: none;
     outline: none;
+    padding: 8px;
+    margin: 8px 0;
 }
 
+input[type="submit"] {
+    background-color: #2d8ac7;
+    border-radius: 6px;
+    color: white;
+}
+
+input:hover, button:hover, .circleButton:hover, .regularButton:hover {
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+}
+
+input, button, .circleButton, .regularButton {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
 
 #create_notebook {
     background: url("images/buttons/addNotebookButton64.png") no-repeat;
@@ -209,6 +272,10 @@ input:focus {
     right: 24px;
 
     z-index: 1;
+
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
 }
 
 #notebook_create_input {
@@ -244,7 +311,6 @@ input:focus {
     margin-bottom: 14px;
     margin-right: 8px;
 
-    font-family: 'Amarante', serif;
     font-size: 22px;
     color: white;
 }
@@ -263,10 +329,24 @@ input:focus {
     right: 24px;
     bottom: 96px;
 
+    z-index: 1;
 }
 
-#logout {
-    background: url("images/buttons/logoutButton64.png") no-repeat;
+/*#logout {*/
+    /*background: url("images/buttons/logoutButton64.png") no-repeat;*/
+
+    /*position: fixed;*/
+    /*width: 64px;*/
+    /*height: 64px;*/
+
+    /*right: 24px;*/
+    /*bottom: 168px;*/
+
+    /*z-index: 1;*/
+/*}*/
+
+#user_options {
+    background: url("images/buttons/accountOptions64.png") ;
 
     position: fixed;
     width: 64px;
@@ -274,4 +354,72 @@ input:focus {
 
     right: 24px;
     bottom: 168px;
+
+    z-index: 1;
+}
+
+.indicator {
+    background: url("images/labelGreen.png") no-repeat;
+
+    position: fixed;
+    width: 200px;
+    height: 48px;
+
+    margin-left: -100px;
+
+    bottom: -48px;
+    left: 50%;
+
+    text-align: center;
+
+    visibility: visible;
+
+    font-size: 16px;
+    color: black;
+}
+
+h2 { /*Style for notebook headers*/
+    width: auto;
+    background: #9c95f0;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+#user_sidebar {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+
+    background: #05c394;
+    border-bottom-left-radius: 10px;
+
+    top: -440px;
+    right: 0;
+
+    padding: 10px;
+
+    z-index: 5;
+}
+
+#edit_password {
+    width: 128px;
+    height: auto;
+}
+
+.regularButton {
+    background-color: #2d8ac7;
+    border-radius: 6px;
+
+    padding: 8px;
+}
+
+.color_picker {
+    width: 28px;
+    height: 28px;
+
+    display: inline-block;
+}
+
+.color_picker:hover {
+    outline: 1px solid salmon;
 }
