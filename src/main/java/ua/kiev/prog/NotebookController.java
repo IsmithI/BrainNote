@@ -4,28 +4,28 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import ua.kiev.prog.Entities.*;
 import ua.kiev.prog.Entities.ImageContent.Image;
+import ua.kiev.prog.Entities.ImageService;
 import ua.kiev.prog.Entities.NotebookContent.Notebook;
 import ua.kiev.prog.Entities.NotebookContent.Page;
+import ua.kiev.prog.Entities.NotebookService;
+import ua.kiev.prog.Entities.PageService;
 import ua.kiev.prog.Entities.UserContent.MyUser;
+import ua.kiev.prog.Entities.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by olegb on 30.01.2017.
