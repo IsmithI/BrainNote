@@ -31,6 +31,13 @@
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
         <sdk-home-path>$USER_HOME$/appengine-java-sdk-1.9.50</sdk-home-path>
+        <run-enhancer-on-make>true</run-enhancer-on-make>
+        <files-to-enhance>
+          <file path="$MODULE_DIR$/src/main/java" />
+          <file path="$MODULE_DIR$/src/main/resources" />
+          <file path="$MODULE_DIR$/src/main/java/META-INF" />
+        </files-to-enhance>
+        <persistence-api>JDO3</persistence-api>
       </configuration>
     </facet>
   </component>
@@ -86,5 +93,8 @@
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev 1.9.50" level="application_server_libraries" />
     <orderEntry type="library" name="AppEngine API" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev 1.9.50" level="application_server_libraries" />
+    <orderEntry type="library" name="AppEngine API" level="project" />
+    <orderEntry type="library" name="AppEngine ORM" level="project" />
   </component>
 </module>
