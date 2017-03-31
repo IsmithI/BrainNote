@@ -7,321 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b78aa1c7-5e49-4533-9a9e-5fabbc0f1431" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/fonts/Amarante-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/buttons/accountOptions64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/buttons/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/grid_hor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/labelGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/static/images/options_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/ua/kiev/prog/Entities/ImageContent/Image.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/ua/kiev/prog/Entities/ImageContent/ImageDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/ua/kiev/prog/Entities/ImageContent/ImageDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/ua/kiev/prog/Entities/ImageService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/appengine-api-1.0-sdk-1.9.50.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/appengine-api-labs-1.9.50.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/appengine-endpoints-deps.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/appengine-endpoints.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/appengine-jsr107cache-1.9.50.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/commons-io-2.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/datanucleus-appengine-1.0.10.final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/datanucleus-core-1.1.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/datanucleus-jpa-1.1.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.annotation.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.ejb.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.jms.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.persistence.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.resource.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.servlet.jsp.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/javax.transaction.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/jdo2-api-2.3-eb.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/jsr107cache-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/lib/libservice.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/fonts/Amarante-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/bookmark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/bookmarkGreenTile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/bookmarkGreenVert.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/accountOptions64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/addNotebookButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/addPageButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/deleteNotebook64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/editNotebookButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/emptyButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/logoutButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/notebookPrefs64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/saveChanges64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/buttons/submitNotebookName64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/grid_hor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/label.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/labelGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/labelLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/notebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/notepad_page.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/options_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/sticky_note.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/images/titleLable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-cool.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-cry.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-frown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-wink.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/img/smiley-yell.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce-small.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce-small.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce-small.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/img/anchor.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/img/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/img/object.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/img/trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.annotation.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.ejb.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.jms.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.persistence.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.resource.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.servlet.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.servlet.jsp.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.servlet.jsp.jstl.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/javax.transaction.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/fonts/Amarante-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/buttons/accountOptions64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/buttons/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/grid_hor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/labelGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/static/images/options_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/fonts/Amarante-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/bookmark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/bookmarkGreenTile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/bookmarkGreenVert.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/accountOptions64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/addNotebookButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/addPageButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/deleteNotebook64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/editNotebookButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/emptyButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/logoutButton64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/notebookPrefs64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/saveChanges64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/buttons/submitNotebookName64.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/grid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/grid_hor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/label.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/labelGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/labelLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/notebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/notepad_page.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/options_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/sticky_note.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/images/titleLable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-cool.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-cry.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-frown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-smile.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-wink.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/img/smiley-yell.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce-small.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce-small.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce-small.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/img/anchor.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/img/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/img/object.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/img/trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/AppConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/ImageContent/Image.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/ImageContent/ImageDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/ImageContent/ImageDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/ImageService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/Notebook.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/NotebookDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/NotebookDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/PageDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookContent/PageDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/NotebookService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/PageService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/Role.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/UserContent/MyUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/UserContent/UserDAO.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/UserContent/UserDAOImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Entities/UserService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/NotebookController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/SecurityConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/SecurityWebApplicationInitializer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/Utils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/WebApplication.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/WEB-INF/appengine-web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/appengine-web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/classes/WEB-INF/appengine-web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/dynamic/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/dynamic/notes.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/dynamic/register.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/jquery.tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/langs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/code/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/codesample/css/prism.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/codesample/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/colorpicker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/example/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/example/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/example_dependency/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/hr/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/image/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/imagetools/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/link/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/lists/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/media/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/paste/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/preview/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/print/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/save/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/table/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/template/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/textpattern/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/toc/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/plugins/wordcount/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/content.inline.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/fonts/tinymce.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/skin.ie7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/skins/lightgray/skin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/themes/inlite/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/themes/modern/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/js/tinymce/tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/static/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/BrainNote_war_exploded/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/dynamic/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/dynamic/notes.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/dynamic/register.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/jquery.tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/langs/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/code/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/codesample/css/prism.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/codesample/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/colorpicker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/example/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/example/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/example_dependency/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/hr/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/image/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/imagetools/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/link/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/lists/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/media/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/paste/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/preview/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/print/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/save/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/table/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/template/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/textpattern/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/toc/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/plugins/wordcount/plugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/content.inline.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/content.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/fonts/tinymce.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/skin.ie7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/skins/lightgray/skin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/themes/inlite/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/themes/modern/theme.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/js/tinymce/tinymce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/static/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1227,7 +914,7 @@
       <workItem from="1490714703800" duration="19540000" />
       <workItem from="1490806461774" duration="2341000" />
       <workItem from="1490884310932" duration="1221000" />
-      <workItem from="1490947947206" duration="10214000" />
+      <workItem from="1490947947206" duration="10400000" />
     </task>
     <task id="LOCAL-00001" summary="Removed edit notebook button. First page is now shown as default page. Password, notebook name edit mechanisms. Page removal. Notebook preferences now at the top right corner of the notebook. Logout button is now in special sidebar menu. Added animations.">
       <created>1490734173311</created>
@@ -1362,11 +1049,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490961442990</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Deploy">
+      <created>1490961712647</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1490961712647</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87876000" />
+    <option name="totallyTimeSpent" value="88062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
