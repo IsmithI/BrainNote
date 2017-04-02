@@ -52,7 +52,7 @@ public class PageDAOImpl implements PageDAO{
     @Override
     public List<Page> list(long notebook_id) {
         List<Page> pages = entityManager.createQuery("SELECT p FROM Page p").getResultList();
-        List<Page> new_pages = new LinkedList<>();
+        List<Page> new_pages = new LinkedList<Page>();
         for (Page page : pages) {
             if(page.getNotebook().getId() == notebook_id) new_pages.add(page);
         }
