@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b78aa1c7-5e49-4533-9a9e-5fabbc0f1431" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_2.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterPath="" />
@@ -129,137 +128,15 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/js/tinymce/themes/modern/theme.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/js/tinymce/tinymce.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/style.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/dynamic/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/dynamic/notes.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/notes.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/date.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/date.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/Amarante-Regular.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/Amarante-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/back.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/back.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/background.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/background.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/bookmark.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/bookmark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/bookmarkGreenTile.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/bookmarkGreenTile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/bookmarkGreenVert.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/bookmarkGreenVert.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/accountOptions64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/accountOptions64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/addNotebookButton64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/addNotebookButton64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/addPageButton64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/addPageButton64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/deleteNotebook64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/deleteNotebook64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/edit.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/edit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/editNotebookButton64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/editNotebookButton64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/emptyButton64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/emptyButton64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/logoutButton64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/logoutButton64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/notebookPrefs64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/notebookPrefs64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/saveChanges64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/saveChanges64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/buttons/submitNotebookName64.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/buttons/submitNotebookName64.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/grid.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/grid.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/grid_hor.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/grid_hor.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/label.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/label.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/labelGreen.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/labelGreen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/labelLeft.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/labelLeft.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/notebook.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/notebook.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/notepad_page.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/notepad_page.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/options_panel.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/options_panel.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/sticky_note.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/sticky_note.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/images/titleLable.png" afterPath="$PROJECT_DIR$/src/main/webapp/static/images/titleLable.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/jquery.tinymce.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/jquery.tinymce.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/langs/readme.md" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/langs/readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/license.txt" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/license.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/advlist/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/anchor/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/autolink/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/autoresize/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/autosave/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/bbcode/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/charmap/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/code/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/code/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/codesample/css/prism.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/codesample/css/prism.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/codesample/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/codesample/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/colorpicker/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/colorpicker/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/contextmenu/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/directionality/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-cool.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-cool.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-cry.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-cry.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-embarassed.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-frown.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-frown.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-innocent.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-kiss.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-laughing.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-sealed.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-smile.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-smile.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-surprised.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-undecided.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-wink.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-wink.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/img/smiley-yell.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/img/smiley-yell.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/emoticons/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/example/dialog.html" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/example/dialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/example/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/example/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/example_dependency/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/example_dependency/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/fullpage/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/fullscreen/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/hr/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/hr/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/image/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/image/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/imagetools/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/imagetools/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/importcss/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/insertdatetime/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/legacyoutput/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/link/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/link/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/lists/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/lists/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/media/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/media/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/nonbreaking/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/noneditable/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/pagebreak/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/paste/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/paste/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/preview/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/preview/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/print/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/print/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/save/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/save/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/searchreplace/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/spellchecker/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/tabfocus/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/table/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/table/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/template/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/template/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/textcolor/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/textpattern/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/textpattern/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/toc/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/toc/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/visualblocks/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/visualchars/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/plugins/wordcount/plugin.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/plugins/wordcount/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/content.inline.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/content.inline.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/content.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/content.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce-small.eot" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce-small.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce-small.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce-small.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce-small.woff" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce-small.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce.eot" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce.svg" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/fonts/tinymce.woff" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/fonts/tinymce.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/img/anchor.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/img/anchor.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/img/loader.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/img/loader.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/img/object.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/img/object.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/img/trans.gif" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/img/trans.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/skin.ie7.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/skin.ie7.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/skins/lightgray/skin.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/skins/lightgray/skin.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/themes/inlite/theme.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/themes/inlite/theme.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/themes/modern/theme.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/themes/modern/theme.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/tinymce/tinymce.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/kiev/prog/AppConfig.class" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/AppConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/kiev/prog/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/SecurityConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/kiev/prog/WebApplication.class" afterPath="$PROJECT_DIR$/target/classes/ua/kiev/prog/WebApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/BrainNote_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/BrainNote_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BrainNote.iml" afterPath="$PROJECT_DIR$/BrainNote.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/kiev/prog/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ua/kiev/prog/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/kiev/prog/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ua/kiev/prog/SecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -280,7 +157,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
+            <state relative-caret-position="565">
               <caret line="92" column="12" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
               <folding />
             </state>
@@ -566,7 +443,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33793104" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -587,7 +464,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Maven Config">
+  <component name="RunManager" selected="Heroku Deployment.Heroku">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1166,7 +1043,7 @@
       <workItem from="1490806461774" duration="2341000" />
       <workItem from="1490884310932" duration="1221000" />
       <workItem from="1490947947206" duration="11827000" />
-      <workItem from="1491145589947" duration="12094000" />
+      <workItem from="1491145589947" duration="12216000" />
     </task>
     <task id="LOCAL-00001" summary="Removed edit notebook button. First page is now shown as default page. Password, notebook name edit mechanisms. Page removal. Notebook preferences now at the top right corner of the notebook. Logout button is now in special sidebar menu. Added animations.">
       <created>1490734173311</created>
@@ -1350,11 +1227,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491147003390</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Deploy">
+      <created>1491159455417</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1491159455418</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101583000" />
+    <option name="totallyTimeSpent" value="101705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1379,7 +1263,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6003236" sideWeight="0.49697885" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6003236" sideWeight="0.49697885" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1774,7 +1658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="565">
           <caret line="92" column="12" lean-forward="false" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
           <folding />
         </state>

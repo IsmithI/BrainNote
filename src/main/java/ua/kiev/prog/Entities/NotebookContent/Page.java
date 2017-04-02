@@ -25,7 +25,7 @@ public class Page {
     private Notebook notebook;
 
     @OneToMany(mappedBy = "page", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Image> images = new ArrayList<>();
+    private List<Image> images = new ArrayList<Image>();
 
     private int page_n;
 

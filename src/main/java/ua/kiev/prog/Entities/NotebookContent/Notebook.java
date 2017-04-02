@@ -25,7 +25,7 @@ public class Notebook {
     private MyUser user;
 
     @OneToMany(mappedBy = "notebook", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    private List<Page> pages = new LinkedList<>();
+    private List<Page> pages = new LinkedList<Page>();
 
     public Notebook() {}
 

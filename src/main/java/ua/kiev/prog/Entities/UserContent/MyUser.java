@@ -27,10 +27,10 @@ public class MyUser {
     private String email;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private List<Notebook> notebooks = new ArrayList<>();
+    private List<Notebook> notebooks = new ArrayList<Notebook>();
 
     @OneToMany(mappedBy = "role_user", fetch = FetchType.EAGER)
-    private Set<Role> roles = new HashSet<>();
+    private Set<Role> roles = new HashSet<Role>();
 
     public MyUser() {}
 
