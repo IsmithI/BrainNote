@@ -117,7 +117,7 @@ public class NotebookController {
     @RequestMapping(value = "/notes/pages", method = RequestMethod.POST)
     public String onListPages(Model model,
                               @RequestParam Long notebook_id) {
-        List<ua.kiev.prog.Entities.NotebookContent.Page> pages = new LinkedList<>();
+        List<Page> pages = new LinkedList<Page>();
         pages.addAll(notebookService.get(notebook_id).getPages());
         String pages_json = listToJSON(pages);
 
