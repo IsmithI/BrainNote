@@ -13,11 +13,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("ua.kiev.prog")
 public class WebApplication extends SpringBootServletInitializer {
 
-    private static Class<WebApplication> applicationClass = WebApplication.class;
-
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(applicationClass);
+        return application.sources(WebApplication.class);
     }
 
     public static void main(String[] args) throws Exception {
