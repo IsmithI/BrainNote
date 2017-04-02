@@ -11,11 +11,10 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
@@ -24,9 +23,9 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan(basePackages = "ua.kiev.prog")
 @EnableTransactionManagement
 @EnableWebMvc
+@ComponentScan("ua.kiev.prog")
 @Import({SecurityConfig.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
@@ -73,10 +72,17 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return ds;
     }
 
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        registry.addViewController("/").setViewName("index");
+//        registry.addViewController("/index").setViewName("index");
+//        registry.addViewController("/notes").setViewName("notes");
+//    }
+
     @Bean
-    public ViewResolver setupViewResolver() {
-        UrlBasedViewResolver resolver = new UrlBasedViewResolver();
-        resolver.setPrefix("/dynamic/");
+    public InternalResourceViewResolver setupViewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/WEB-INF/views");
         resolver.setSuffix(".jsp");
         resolver.setViewClass(JstlView.class);
         resolver.setOrder(1);
@@ -86,17 +92,19 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
-                .addResourceHandler("/static/**")
-                .addResourceLocations("/static/");
+                .addResourceHandler("/src/main/webapp/static/**")
+                .addResourceLocations("/src/main/webapp/static/");
+    }
+
+    @Override
+    public void configureDefaultServletHandling(
+            DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
     }
 
     @Bean
-    public CommonsMultipartResolver multipartResolver() {
-
-        CommonsMultipartResolver cmr = new CommonsMultipartResolver();
-        cmr.setMaxUploadSize(maxUploadSizeInMb * 2);
-        cmr.setMaxUploadSizePerFile(maxUploadSizeInMb); //bytes
-        return cmr;
+    public StandardServletMultipartResolver multipartResolver() {
+        return new StandardServletMultipartResolver();
 
     }
 
