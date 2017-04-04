@@ -29,19 +29,19 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
     private int maxUploadSizeInMb = 20 * 1024 * 1024; //20Mb
 
-//    @Bean
-//    public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
-//            (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
-//        Properties jpaProp = new Properties();					//
-//        jpaProp.put("hibernate.hbm2ddl.auto", "update");			//обновить текущую конфигурацию
-//
-//        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-//        entityManagerFactory.setDataSource(dataSource);
-//        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
-//        entityManagerFactory.setJpaProperties(jpaProp);				//задает доп настройки
-//        entityManagerFactory.setPackagesToScan("ua.kiev.prog");
-//        return entityManagerFactory;
-//    }
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
+            (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
+        Properties jpaProp = new Properties();					//
+        jpaProp.put("hibernate.hbm2ddl.auto", "update");			//обновить текущую конфигурацию
+
+        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        entityManagerFactory.setDataSource(dataSource);
+        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+        entityManagerFactory.setJpaProperties(jpaProp);				//задает доп настройки
+        entityManagerFactory.setPackagesToScan("ua.kiev.prog");
+        return entityManagerFactory;
+    }
 
 
     @Bean
@@ -80,7 +80,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public InternalResourceViewResolver setupViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/views");
+        resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         resolver.setViewClass(JstlView.class);
         resolver.setOrder(1);
@@ -90,8 +90,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
-                .addResourceHandler("/src/main/webapp/static/**")
-                .addResourceLocations("/src/main/webapp/static/");
+                .addResourceHandler("/static/**")
+                .addResourceLocations("/static/");
     }
 
     @Override

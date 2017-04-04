@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--    <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=lxalycrthi7ctx37q8glnbs4x7t2kin0fqtasllnodvj6z1k"></script>-->
     <script src="/src/main/WEB-INF/static/tinymce/tinymce.min.js"></script>
-    <link href="<c:url value="/src/main/WEB-INF/static/style.css" />" rel="stylesheet">
+    <link href="<c:url value="/static/style.css" />" rel="stylesheet">
 
 </head>
 <body>
@@ -144,7 +144,7 @@
                         <div id="notebook_prefs_${notebook.id}"
                              style="width: 46px; height: 46px; vertical-align: middle; display: inline-block;
                                      background: url(<c:url
-                                     value="/src/main/WEB-INF/static/images/buttons/notebookPrefs64.png"/>) no-repeat; float: right;">
+                                     value="/static/images/buttons/notebookPrefs64.png"/>) no-repeat; float: right;">
                         </div>
                     </h2>
                     <br>
@@ -339,11 +339,11 @@
 
                 <div class="options">
                     <div class="options_button" onclick="savePagesAndText(${notebook.id})"
-                         style="background: url('<c:url value="/src/main/WEB-INF/static/images/buttons/addPageButton64.png"/>');
+                         style="background: url('<c:url value="/static/images/buttons/addPageButton64.png"/>');
                                  width: 64px; height: 64px;">
                     </div>
                     <div class="options_button"
-                         style="background: url('<c:url value="/src/main/WEB-INF/static/images/buttons/deleteNotebook64.png"/>');
+                         style="background: url('<c:url value="/static/images/buttons/deleteNotebook64.png"/>');
                                  width: 64px; height: 64px;" onclick="deletePages(${notebook.id})">
                     </div>
 
