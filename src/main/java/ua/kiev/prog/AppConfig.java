@@ -24,8 +24,6 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableWebMvc
-@ComponentScan("ua.kiev.prog")
 @Import({SecurityConfig.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
