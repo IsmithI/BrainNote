@@ -64,8 +64,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUrl("jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_4f2de747872e06a?reconnect=true");
-        ds.setUsername("b31317fa156450");
-        ds.setPassword("d8f651d6");
+        ds.setUsername("be3949042debec");
+        ds.setPassword("d9e099f7");
 
         return ds;
     }
