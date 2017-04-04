@@ -10,7 +10,7 @@
     <title>Your notes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--    <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=lxalycrthi7ctx37q8glnbs4x7t2kin0fqtasllnodvj6z1k"></script>-->
-    <script src="/src/main/WEB-INF/static/tinymce/tinymce.min.js"></script>
+    <script src="/static/tinymce/tinymce.min.js"></script>
     <link href="<c:url value="/static/style.css" />" rel="stylesheet">
 
 </head>
@@ -477,6 +477,4 @@
 </script>
 </body>
 </html>
-
-
 
