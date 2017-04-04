@@ -29,19 +29,19 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
     private int maxUploadSizeInMb = 20 * 1024 * 1024; //20Mb
 
-    @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
-            (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
-        Properties jpaProp = new Properties();					//
-        jpaProp.put("hibernate.hbm2ddl.auto", "update");			//обновить текущую конфигурацию
-
-        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-        entityManagerFactory.setDataSource(dataSource);
-        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
-        entityManagerFactory.setJpaProperties(jpaProp);				//задает доп настройки
-        entityManagerFactory.setPackagesToScan("ua.kiev.prog");
-        return entityManagerFactory;
-    }
+//    @Bean
+//    public LocalContainerEntityManagerFactoryBean entityManagerFactory 		//фабрика которая создает ЕМ всем кто попросит
+//            (DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {	//содаем фабрику на основе переданых параметров (бинов)
+//        Properties jpaProp = new Properties();					//
+//        jpaProp.put("hibernate.hbm2ddl.auto", "update");			//обновить текущую конфигурацию
+//
+//        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+//        entityManagerFactory.setDataSource(dataSource);
+//        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+//        entityManagerFactory.setJpaProperties(jpaProp);				//задает доп настройки
+//        entityManagerFactory.setPackagesToScan("ua.kiev.prog");
+//        return entityManagerFactory;
+//    }
 
 
     @Bean
