@@ -139,7 +139,7 @@ body {
     color: black;
 
     right: 50%;
-    margin-right: 425px;
+    margin-right: -425px;
 
     top: 2000px;
 }

@@ -63,7 +63,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://jfrpocyduwfg38kq.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/cblyuhfsrvq15j5d");
+        ds.setUrl("jdbc:mysql://jfrpocyduwfg38kq.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/cblyuhfsrvq15j5d?useUnicode=true&characterEncoding=utf8");
         ds.setUsername("e0ls67a6mmle5g1d");
         ds.setPassword("gzaell9vmaarz5ps");
 
