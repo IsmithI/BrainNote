@@ -76,8 +76,6 @@
     $(document).ready(function () {
         $('#register').hide();
 
-//        adjustWindowPosition();
-
         $("#confirm_register").click(function () {
             var password = $('input[name=password]').val();
             var password_repeat = $('input[name=password_repeat]').val();
@@ -149,21 +147,8 @@
         }, false);
     });
 
-    $(window).resize(function () {
-        adjustWindowPosition();
-    });
-
     function hasWhiteSpaces(s) {
         return /\s/g.test(s);
-    }
-    function adjustWindowPosition() {
-        if ($(window).width() < 520)
-            $('#header').css({"right": 520});
-        else $('#header').css({"right": 0});
-        $("#register").css({
-                "left": $(window).width() / 2 - $("#register").width() / 2
-            }
-        );
     }
 
 
