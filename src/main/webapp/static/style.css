@@ -18,8 +18,8 @@ body {
     width: 1080px;
     height: 640px;
 
-    left: 50%;
-    margin-left: 540px;
+    right: 50%;
+    margin-right: 540px;
 }
 
 #titleLabel {

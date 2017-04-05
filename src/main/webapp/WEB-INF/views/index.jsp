@@ -95,7 +95,7 @@
             $('#register').show();
 
             $("#header").animate({
-                left: "-=2000"
+                right: "+=2000"
             }, 1000, function () {
             });
 
@@ -119,7 +119,7 @@
         //animate register disappear
         $("#back").click(function () {
             $("#header").animate({
-                left: "50%"
+                right: "50%"
             }, 1000, function () {
             });
 
