@@ -131,7 +131,7 @@
             });
 
             $("#register").animate({
-                top: 2000
+                top: 2000,
             }, 1000, function () {
                 $('#register').hide();
             });

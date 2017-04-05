@@ -25,8 +25,6 @@ body {
 }
 
 #titleLabel {
-    background: url("images/titleLable.png") no-repeat;
-
     width: 507px;
     height: 258px;
 
@@ -36,7 +34,9 @@ body {
     color: whitesmoke;
 }
 
-#titleLabel p {
+#titleLabel #user_name {
+    background: #3e7ce3;
+    display: inline-block;
     padding: 46px;
 }
 

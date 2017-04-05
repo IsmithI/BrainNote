@@ -18,7 +18,9 @@
 
 
 <div id="titleLabel">
-    <p>Hello, ${login}!</p>
+    <div style="background: url('images/title_label_left.png'); display: inline-block;"></div>
+    <div id="user_name">Hello, ${login}!</div>
+    <div style="background: url('images/title_label_right.png'); display: inline-block;"></div>
 </div>
 
 
@@ -166,17 +168,23 @@
                         <div style="height: 48px; line-height: 48px; vertical-align: middle;">
                             <div style="display: inline-block;">Color:</div>
                             <span style="line-height: inherit; vertical-align: middle">
-                                <div class="color_picker color_picker_${notebook.id}" style="background-color: #9E9E9E;"></div>
-                                <div class="color_picker color_picker_${notebook.id}" style="background-color: #f08080"></div>
-                                <div class="color_picker color_picker_${notebook.id}" style="background-color: #2e8b57"></div>
-                                <div class="color_picker color_picker_${notebook.id}" style="background-color: #f5deb3"></div>
+                                <div class="color_picker color_picker_${notebook.id}"
+                                     style="background-color: #9E9E9E;"></div>
+                                <div class="color_picker color_picker_${notebook.id}"
+                                     style="background-color: #f08080"></div>
+                                <div class="color_picker color_picker_${notebook.id}"
+                                     style="background-color: #2e8b57"></div>
+                                <div class="color_picker color_picker_${notebook.id}"
+                                     style="background-color: #f5deb3"></div>
                             </span>
                         </div>
 
 
-                        <input class="regularButton" type="button" id="delete_all_pages_${notebook.id}" value="Delete all pages"
+                        <input class="regularButton" type="button" id="delete_all_pages_${notebook.id}"
+                               value="Delete all pages"
                                style="color: white"/>
-                        <input class="regularButton" type="button" id="delete_notebook_${notebook.id}" value="Delete this notebook"
+                        <input class="regularButton" type="button" id="delete_notebook_${notebook.id}"
+                               value="Delete this notebook"
                                style="color: white"/>
                     </div>
                     <hr>
@@ -231,7 +239,7 @@
 
                             <c:forEach items="${notebook.pages}" var="page" varStatus="status">
                                 <div class="page_wrapper_${notebook.id}" id="page_wrapper_${page.id}"
-                                ${status.first ? "" : "style = 'display: none';"}>
+                                    ${status.first ? "" : "style = 'display: none';"}>
 
                                     <script>
                                         tinymce.init({
@@ -327,12 +335,12 @@
                                             ${page.page_n}
                                     </p>
                                     <%--<script>--%>
-                                        <%--console.log(${page.page_n});--%>
+                                    <%--console.log(${page.page_n});--%>
                                     <%--</script>--%>
                                 </c:forEach>
                             </div>
                             <script>
-                                $(document.getElementById("page_1_"+${notebook.id})).css({background : '#37E7DC'});
+                                $(document.getElementById("page_1_" +${notebook.id})).css({background: '#37E7DC'});
                             </script>
 
                         </c:if>
