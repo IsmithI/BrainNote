@@ -151,7 +151,7 @@ body {
 }
 
 #register_form input {
-    background: transparent url("/src/main/webapp/static/images/label.png");
+    background: transparent url("images/label.png");
     width: 256px;
     height: 36px;
     border: 0;

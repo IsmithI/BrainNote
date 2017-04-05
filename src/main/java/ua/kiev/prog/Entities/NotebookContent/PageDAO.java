@@ -15,4 +15,5 @@ public interface PageDAO {
     List<Page> list();
     List<Page> list(long notebook_id);
     void setText(long id, String text);
+    void removeObsoletePages();
 }

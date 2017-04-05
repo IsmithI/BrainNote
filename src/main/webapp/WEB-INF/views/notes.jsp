@@ -326,6 +326,9 @@
                                         <input type="checkbox" class="page_select" id="${page.id}"/>
                                             ${page.page_n}
                                     </p>
+                                    <%--<script>--%>
+                                        <%--console.log(${page.page_n});--%>
+                                    <%--</script>--%>
                                 </c:forEach>
                             </div>
                             <script>
@@ -353,7 +356,7 @@
                     savePagesAndText = function (id) {
                         saveText();
                         $.post("/notes/add_page", {notebookId: id}, function () {
-                            window.location = "/notes";
+                            window.location.reload();
                         });
                     }
                 </script>

@@ -66,4 +66,12 @@ public class PageDAOImpl implements PageDAO{
         page.setText(text);
         entityManager.merge(page);
     }
+
+    @Override
+    public void removeObsoletePages() {
+        List<Page> pages = entityManager.createQuery("SELECT p FROM Page p WHERE notebook_id = null").getResultList();
+        for (Page page : pages) {
+            entityManager.remove(page);
+        }
+    }
 }
