@@ -93,6 +93,7 @@
         //animate register appear
         $('#button_register').click(function () {
             $('#register').show();
+
             $("#header").animate({
                 left: "-=2000"
             }, 1000, function () {
@@ -118,7 +119,7 @@
         //animate register disappear
         $("#back").click(function () {
             $("#header").animate({
-                left: 0
+                left: "50%"
             }, 1000, function () {
             });
 
