@@ -74,7 +74,9 @@
 </div>
 <script>
     $(document).ready(function () {
-        adjustWindowPosition();
+        $('#register').hide();
+
+//        adjustWindowPosition();
 
         $("#confirm_register").click(function () {
             var password = $('input[name=password]').val();
@@ -90,6 +92,7 @@
 
         //animate register appear
         $('#button_register').click(function () {
+            $('#register').show();
             $("#header").animate({
                 left: "-=2000"
             }, 1000, function () {
@@ -133,6 +136,7 @@
                 top: 2000,
                 left: $(window).width() / 2 - $("#register").width() / 2
             }, 1000, function () {
+                $('#register').hide();
             });
         });
 

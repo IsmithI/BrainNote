@@ -341,11 +341,11 @@
 
 
                 <div class="options">
-                    <div class="options_button" onclick="savePagesAndText(${notebook.id})"
+                    <div class="options_button circleButton" onclick="savePagesAndText(${notebook.id})"
                          style="background: url('<c:url value="/static/images/buttons/addPageButton64.png"/>');
                                  width: 64px; height: 64px;">
                     </div>
-                    <div class="options_button"
+                    <div class="options_button circleButton"
                          style="background: url('<c:url value="/static/images/buttons/deleteNotebook64.png"/>');
                                  width: 64px; height: 64px;" onclick="deletePages(${notebook.id})">
                     </div>
