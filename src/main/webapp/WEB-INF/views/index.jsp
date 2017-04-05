@@ -108,8 +108,7 @@
             });
 
             $("#register").animate({
-                top: 0,
-                left: $(window).width() / 2 - $("#register").width() / 2
+                top: 0
             }, 1000, function () {
             });
         });
@@ -132,8 +131,7 @@
             });
 
             $("#register").animate({
-                top: 2000,
-                left: $(window).width() / 2 - $("#register").width() / 2
+                top: 2000
             }, 1000, function () {
                 $('#register').hide();
             });

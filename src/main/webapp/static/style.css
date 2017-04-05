@@ -21,7 +21,7 @@ body {
     height: 640px;
 
     right: 50%;
-    margin-left: 1080px;
+    margin-right: -540px;
 }
 
 #titleLabel {
@@ -140,6 +140,8 @@ body {
 
     right: 50%;
     margin-right: 425px;
+
+    top: 2000px;
 }
 
 #register_form {
